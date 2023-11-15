@@ -1,0 +1,73 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.vl {
+    height: 600px;
+    margin-top: 8rem;
+    display: flex;
+    flex-wrap: wrap;
+    border-left: 2px solid rgb(2, 127, 143);
+  }
+  .contact{
+   /* padding-left: 8rem; */
+   margin-top: 10rem;
+   text-align: center;
+  }
+  .contact p a{
+    margin-top: 1rem;
+  }
+  /* >>>>>>>>>>>>>>>>>>>>form  */
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  .container {
+    margin-top: 3rem;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  .head{
+    margin-top: 4rem;
+    color: #038185;
+  }
+  /* live location */
+  .txt{
+    color: #038185;
+  }
+  #btn{
+    width:150px;
+    height: 40px;
+    border: none;
+    color: white;
+    font-weight: 500;
+    border-radius: 20px;
+    background: #038185 ;
+  }
+  .custom-shape-divider-bottom-1681451611 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1681451611 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 172px;
+}
+
+.custom-shape-divider-bottom-1681451611 .shape-fill {
+    fill: #FFFFFF;
+}

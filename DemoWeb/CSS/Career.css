@@ -1,0 +1,173 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* this style for navbar  */
+.navbar {
+    padding: 0 4rem;
+    background: rgb(0, 9, 9);
+    background-attachment: fixed;
+}
+
+.navbar-toggler-icon {
+    background: teal;
+    color: white;
+}
+
+ul {
+    margin-left: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li {
+    margin: 0.5rem;
+}
+
+.dropdown-menu {
+    background: rgb(173, 246, 246);
+}
+
+#navbarSupportedContent .nav-link {
+    color: #fff;
+    font-weight: 600;
+}
+
+/* >>>>>>>>logo style code >>>>>> */
+
+.logo {
+    width: 150px;
+    height: 80px;
+}
+
+form #form-control {
+    height: 40px;
+    width: 250px;
+    border-radius: 15px 15px;
+}
+
+form .btn1 {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    background: teal;
+    border-radius: 15px 15px;
+}
+
+.background-radial-gradient {
+    margin-top: 6rem;
+    background-color: hsl(218, 41%, 15%);
+    background-image: radial-gradient(650px circle at 0% 0%,
+            hsl(218, 41%, 35%) 15%,
+            hsl(218, 41%, 30%) 35%,
+            hsl(218, 41%, 20%) 75%,
+            hsl(218, 41%, 19%) 80%,
+            transparent 100%),
+        radial-gradient(1250px circle at 100% 100%,
+            hsl(218, 41%, 45%) 15%,
+            hsl(218, 41%, 30%) 35%,
+            hsl(218, 41%, 20%) 75%,
+            hsl(218, 41%, 19%) 80%,
+            transparent 100%);
+}
+
+#radius-shape-1 {
+    height: 220px;
+    width: 220px;
+    top: -60px;
+    left: -130px;
+    background: radial-gradient(#44006b, #ad1fff);
+    overflow: hidden;
+}
+
+#radius-shape-2 {
+    border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+    bottom: -60px;
+    right: -110px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(#44006b, #ad1fff);
+    overflow: hidden;
+}
+
+.bg-glass {
+    background-color: hsla(0, 0%, 100%, 0.9) !important;
+    backdrop-filter: saturate(200%) blur(25px);
+}
+
+.caree {
+    text-align: center;
+    margin-top: 6rem;
+    background-color: hsl(218, 41%, 15%);
+    background-image: radial-gradient(650px circle at 0% 0%,
+            hsl(173, 27%, 6%) 15%,
+            hsl(171, 49%, 16%) 35%,
+            hsl(218, 98%, 19%) 75%,
+            hsl(218, 26%, 30%) 80%,
+            transparent 100%),
+        radial-gradient(1250px circle at 100% 100%,
+            hsl(175, 92%, 15%) 15%,
+            hsl(186, 56%, 30%) 35%,
+            hsl(220, 47%, 25%) 75%,
+            hsl(166, 28%, 41%) 80%,
+            transparent 100%);
+}
+
+/* >>>>>>>>>>Footer>>>>>>>>>>>  */
+footer {
+    background-color: rgb(6, 17, 27);
+}
+
+#c1 {
+    color: white;
+}
+
+.col {
+    text-align: center;
+    box-shadow: 0px 5px 10px rgb(23, 21, 21);
+}
+
+.col a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.col a:hover {
+    color: rgb(168, 58, 58);
+}
+
+.footlogo {
+    width: 150px;
+    height: 150px;
+}
+
+/* use for footer tagline  */
+#c2 {
+    color: white;
+    text-align: center;
+}
+
+.cont {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+.bg-image{
+    padding: 200px 0;
+    color: #04ae6a;
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../IMAGES/serv4.png);
+}
+/* .bg-color{
+    background: linear-gradient(180deg, rgb(75, 254, 236), rgb(154, 207, 250));;
+} */
+.bx6{
+    margin-top: 5rem;
+    text-align: center;
+  }
