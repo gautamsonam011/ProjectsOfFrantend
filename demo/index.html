@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- ===== Link Swiper's CSS ===== -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .crd-img {
+            height: 200px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 0 auto;
+            background: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgb(98, 98, 248));
+        }
+
+        .crd-img img {
+            overflow: hidden;
+            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+            transition: 0.5s all ease-in-out;
+        }
+
+        .crd-img:hover img {
+            transform: scale(1.5);
+        }
+
+        .text-block {
+            width: 155px;
+            border-radius: 10px;
+            padding: 3px;
+            position: absolute;
+            margin-top: -45px;
+            margin-left: 5px;
+            background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgb(15, 17, 23));
+        }
+
+        .text-block h4 {
+            font-family: serif;
+            color: #fff;
+        }
+
+        .nav-pills {
+            background: rgb(251, 149, 169);
+        }
+
+        .nav-pills .nav-item .nav-link {
+            text-align: center;
+            color: rgb(231, 231, 243);
+            font-size: larger;
+            font-family: serif;
+            margin: 0 2rem;
+        }
+
+        #container {
+            display: grid;
+            place-items: center
+        }
+
+        #slider-container {
+            height: 300px;
+            width: 85vw;
+            position: relative;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        #slider-container .btn {
+            
+            position: absolute;
+            top: calc(50% - 30px);
+            height: 30px;
+            width: 20px;
+            border-left: 3px solid rgb(43, 169, 248);
+            border-top: 3px solid rgb(107, 164, 250);
+        }
+
+        #slider-container .btn:hover {
+            transform: scale(1.2);
+        }
+
+        #slider-container .btn.inactive {
+            border-color: rgb(57, 53, 54)
+        }
+
+        #slider-container .btn:first-of-type {
+            transform: rotate(-45deg);
+            left: 10px
+        }
+
+        #slider-container .btn:last-of-type {
+            transform: rotate(135deg);
+            right: 10px;
+        }
+
+        #slider-container #slider {
+            display: flex;
+            width: 1000%;
+            height: 100%;
+            transition: all .5s;
+        }
+
+        #slider-container #slider .slide {
+            height: 90%;
+            margin: auto 10px;
+            background-color: #a847a4;
+            box-shadow: 2px 2px 4px 2px white, -2px -2px 4px 2px white;
+            display: grid;
+            place-items: center;
+        }
+
+        @media only screen and (min-width: 1100px) {
+
+            #slider-container #slider .slide {
+                width: calc(2.5% - 20px);
+            }
+
+        }
+
+        @media only screen and (max-width: 1100px) {
+
+            #slider-container #slider .slide {
+                width: calc(3.3333333% - 20px);
+            }
+
+        }
+
+        @media only screen and (max-width: 900px) {
+
+            #slider-container #slider .slide {
+                width: calc(5% - 20px);
+            }
+
+        }
+
+        @media only screen and (max-width: 550px) {
+
+            #slider-container #slider .slide {
+                width: calc(10% - 20px);
+            }
+
+        }
+
+        .bx{
+            font-family: serif;
+            width:200px;
+            color: #fff;
+            position: absolute;
+            margin-top: -165px;
+            background:#4f266f; 
+            margin-left: -30px;
+            border-radius: 5px;
+        }
+        .bx-p{
+            text-align: center;
+            font-family: serif;
+            width:100px;
+            color: #5b05a0;
+            position: absolute;
+            margin-top: -100px;
+            background:#f8f5fa; 
+            margin-left: -130px;
+            border-radius: 5px;
+            height: 25px;
+        }
+
+        @media screen and (max-width:320px) {
+            .bx{margin-left: -10px;}
+            .bx-p{margin-left: -110px;}
+        }
+        ul li{
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="container mt-5" id="container">
+        <h2 style="color:rgb(26, 26, 88);font-family:serif;">Top cultural sights you can't miss</h2>
+        <div id="slider-container">
+            <span onclick="slideRight()" class="btn"></span><span></span>
+            <div id="slider">
+                <div class="slide crd-img"><img src="67.png">
+                    <div class="bx">
+                        <h3>1. City Name</h3>
+                    </div>
+                    <div class="bx-p">
+                        <p> 45 activities</p>
+                    </div>
+                </div>
+                <div class="slide crd-img"><img src="68.png">
+                    <div class="bx">
+                        <h3>1. City Name</h3>
+                    </div>
+                    <div class="bx-p">
+                        <p> 45 activities</p>
+                    </div>
+                </div>
+                <div class="slide crd-img"><img src="69.png">
+                    <div class="bx">
+                        <h3>1. City Name</h3>
+                    </div>
+                    <div class="bx-p">
+                       <p> 45 activities</p>
+                    </div>
+                </div>
+                <div class="slide crd-img"><img src="70.png">
+                    <div class="bx">
+                        <h3>1. City Name</h3>
+                    </div> 
+                    <div class="bx-p"><p> 45 activities</p></div>
+                </div>
+                <div class="slide crd-img"><img src="71.png">
+                    <div class="bx">
+                        <h3>1. City Name</h3>
+                    </div>
+                    <div class="bx-p"><p> 45 activities</p></div>
+                </div>
+                
+            </div>
+            <span onclick="slideLeft()" class="btn"></i></span>
+        </div>
+    </div>
+    <!-- ====================================================================== -->
+
+    <div class="container mt-5">
+        <h2 style="color:rgb(26, 26, 88);font-family:serif;">Awe-inspiring culture around the world</h2>
+        <div class="row">
+            <div class="col-md-2">
+                <div class="crd-img"><img src="86.png"></div>
+                <div class="text-block">
+                    <h4>Paris</h4>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="crd-img"><img src="87.png"></div>
+                <div class="text-block">
+                    <h4>Alberobello</h4>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="crd-img"><img src="88.png"></div>
+                <div class="text-block">
+                    <h4>New York</h4>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="crd-img"><img src="89.png"></div>
+                <div class="text-block">
+                    <h4>Berlin</h4>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="crd-img"><img src="90.png"></div>
+                <div class="text-block">
+                    <h4>London</h4>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="crd-img"><img src="91.png"></div>
+                <div class="text-block">
+                    <h4>Milan</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------------------  -->
+
+    <div class="container mt-5">
+        <!-- Nav pills -->
+        <ul class="nav nav-pills" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="pill" href="#home">Top Attractions Wordwide</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#menu1">Top Destinations</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#menu2">Top Countries to Visit</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#menu3">Top Attraction Categories</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div id="home" class="container tab-pane active"><br>
+                <div class="row">
+                    <div class="col-md-2">
+                        <ul>
+                            <li>Mumbai</li>
+                            <li>Pune</li>
+                            <li>Nagpur</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ul>
+                            <li>Mumbai</li>
+                            <li>Pune</li>
+                            <li>Nagpur</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ul>
+                            <li>Mumbai</li>
+                            <li>Pune</li>
+                            <li>Nagpur</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ul>
+                            <li>Mumbai</li>
+                            <li>Pune</li>
+                            <li>Nagpur</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ul>
+                            <li>Mumbai</li>
+                            <li>Pune</li>
+                            <li>Nagpur</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ul>
+                            <li>Mumbai</li>
+                            <li>Pune</li>
+                            <li>Nagpur</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="menu1" class="container tab-pane fade"><br>
+                <div class="row">
+                    <div class="col-md-2">
+                        <ul>
+                            <li>Hydrabad</li>
+                            <li>Madurai</li>
+                            <li>Chennai</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ul>
+                            <li>Hydrabad</li>
+                            <li>Madurai</li>
+                            <li>Chennai</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ul>
+                            <li>Hydrabad</li>
+                            <li>Madurai</li>
+                            <li>Chennai</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ul>
+                            <li>Hydrabad</li>
+                            <li>Madurai</li>
+                            <li>Chennai</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ul>
+                            <li>Hydrabad</li>
+                            <li>Madurai</li>
+                            <li>Chennai</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ul>
+                            <li>Hydrabad</li>
+                            <li>Madurai</li>
+                            <li>Chennai</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="menu2" class="container tab-pane fade"><br>
+                <div class="row">
+                    <div class="col-md-2">
+                        <ul>
+                            <li>Chennai</li>
+                            <li>Kolkata</li>
+                            <li>TamilNadu</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ul>
+                            <li>Chennai</li>
+                            <li>Kolkata</li>
+                            <li>TamilNadu</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ul>
+                            <li>Chennai</li>
+                            <li>Kolkata</li>
+                            <li>TamilNadu</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ul>
+                            <li>Chennai</li>
+                            <li>Kolkata</li>
+                            <li>TamilNadu</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ul>
+                            <li>Chennai</li>
+                            <li>Kolkata</li>
+                            <li>TamilNadu</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ul>
+                            <li>Chennai</li>
+                            <li>Kolkata</li>
+                            <li>TamilNadu</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="menu3" class="container tab-pane fade"><br>
+                <div class="row">
+                    <div class="col-md-2">
+                        <ul>
+                            <li>Lucknow</li>
+                            <li>Shimla</li>
+                            <li>UttraKhand</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ul>
+                            <li>Lucknow</li>
+                            <li>Shimla</li>
+                            <li>UttraKhand</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ul>
+                            <li>Lucknow</li>
+                            <li>Shimla</li>
+                            <li>UttraKhand</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ul>
+                            <li>Lucknow</li>
+                            <li>Shimla</li>
+                            <li>UttraKhand</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ul>
+                            <li>Lucknow</li>
+                            <li>Shimla</li>
+                            <li>UttraKhand</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ul>
+                            <li>Lucknow</li>
+                            <li>Shimla</li>
+                            <li>UttraKhand</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var container = document.getElementById('container')
+        var slider = document.getElementById('slider');
+        var slides = document.getElementsByClassName('slide').length;
+        var buttons = document.getElementsByClassName('btn');
+
+
+        var currentPosition = 0;
+        var currentMargin = 0;
+        var slidesPerPage = 0;
+        var slidesCount = slides - slidesPerPage;
+        var containerWidth = container.offsetWidth;
+        var prevKeyActive = false;
+        var nextKeyActive = true;
+
+        window.addEventListener("resize", checkWidth);
+
+        function checkWidth() {
+            containerWidth = container.offsetWidth;
+            setParams(containerWidth);
+        }
+
+        function setParams(w) {
+            if (w < 551) {
+                slidesPerPage = 1;
+            } else {
+                if (w < 901) {
+                    slidesPerPage = 2;
+                } else {
+                    if (w < 1101) {
+                        slidesPerPage = 3;
+                    } else {
+                        slidesPerPage = 4;
+                    }
+                }
+            }
+            slidesCount = slides - slidesPerPage;
+            if (currentPosition > slidesCount) {
+                currentPosition -= slidesPerPage;
+            };
+            currentMargin = - currentPosition * (100 / slidesPerPage);
+            slider.style.marginLeft = currentMargin + '%';
+            if (currentPosition > 0) {
+                buttons[0].classList.remove('inactive');
+            }
+            if (currentPosition < slidesCount) {
+                buttons[1].classList.remove('inactive');
+            }
+            if (currentPosition >= slidesCount) {
+                buttons[1].classList.add('inactive');
+            }
+        }
+
+        setParams();
+
+        function slideRight() {
+            if (currentPosition != 0) {
+                slider.style.marginLeft = currentMargin + (100 / slidesPerPage) + '%';
+                currentMargin += (100 / slidesPerPage);
+                currentPosition--;
+            };
+            if (currentPosition === 0) {
+                buttons[0].classList.add('inactive');
+            }
+            if (currentPosition < slidesCount) {
+                buttons[1].classList.remove('inactive');
+            }
+        };
+
+        function slideLeft() {
+            if (currentPosition != slidesCount) {
+                slider.style.marginLeft = currentMargin - (100 / slidesPerPage) + '%';
+                currentMargin -= (100 / slidesPerPage);
+                currentPosition++;
+            };
+            if (currentPosition == slidesCount) {
+                buttons[1].classList.add('inactive');
+            }
+            if (currentPosition > 0) {
+                buttons[0].classList.remove('inactive');
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
