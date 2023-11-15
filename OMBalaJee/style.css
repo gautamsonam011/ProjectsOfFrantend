@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  position: sticky;
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+li {
+  padding: 1rem;
+}
+
+/* a{
+    text-decoration:none;
+    color: black;
+} */
+header {
+  position: sticky;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  color: azure;
+  /* font-size: x-large; */
+  /* background-attachment: fixed; */
+  /* background-color: green; */
+}
+
+/* section{
+    background-color: cornflowerblue;
+} */
+/* .container {
+    position: relative;
+    text-align: center;
+    color: white;
+  } */
+/* .rick1{
+    height: 40rem;
+    width: 40rem;
+    
+  } */
+/* .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } */
+p {
+  font-size: x-large;
+  /* display: grid; */
+  color: black;
+  /* margin-top: 5px; */
+}
+
+/* .h1{
+    margin-top: 5px;
+    text-align: center;
+    color: green;
+  } */
+/*footer{ */
+/* color: beige; */
+/* position: sticky; */
+/* } */
+/* .bd{
+    background-color: silver;
+    
+  } */
+/* .content {
+    padding: 16px;
+  } */
+
+/* .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  } */
+
+/* .sticky + .content {
+    padding-top: 102px;
+  } */
+.myDIV {
+  width: 100%;
+  height: auto;
+  /* background: green; */
+  animation: mymov 5s infinite;
+}
+
+@keyframes mymov {
+  from {
+    background-color: royalblue;
+  }
+
+  to {
+    background-color: tomato;
+  }
+}
+
+.bac {
+  animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+  from {
+    background-color: seagreen;
+  }
+
+  to {
+    background-color: hotpink;
+  }
+}
+
+#t1 {
+  width: 800px;
+  height: auto;
+  color: black;
+  position: relative;
+  animation: mym 5s infinite;
+}
+
+@keyframes mym {
+  from {
+    left: 0px;
+  }
+
+  to {
+    left: 200px;
+  }
+}
+
+#t2 {
+  position: relative;
+  animation: myfuc 5s infinite;
+
+}
+
+@keyframes myfuc {
+  from {
+    left: 0px;
+  }
+
+  to {
+    left: 150px;
+  }
+}
+
+#t5 {
+  /* position: relative; */
+  animation: myfuct 5s infinite;
+}
