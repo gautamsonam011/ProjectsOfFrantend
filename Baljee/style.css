@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    
+}
+ul{
+    justify-content: space-around;
+    display: flex;
+    list-style: none;
+}
+li{
+    padding: 1rem;
+}
+a{
+    text-decoration:none;
+    color: black;
+}
+header{
+    background-color: green;
+    height: 3rem;
+    font-size: x-large;
+    color: azure;
+}
+section{
+    background-color: cornflowerblue;
+}
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  .rick1{
+    height: 40rem;
+    width: 40rem;
+    
+  }
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .column {
+    float: left;
+    width: 5%;
+    margin-top: 28%;
+    padding: 5px;
+  }
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+.footer {
+  position: static;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:darkseagreen;
+  color: black;
+}
+.con{
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+#t1{
+  margin-left: 5px;
+  border-color: chartreuse;
+}
+.p{
+  width: 500px;
+  font-size: larger;
+}
